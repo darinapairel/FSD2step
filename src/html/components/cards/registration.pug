@@ -1,0 +1,21 @@
+div(class='card card__check-in-out-form')
+    h1(class='card__title') Регистрация аккаунта
+    input(type="name", placeholder="Имя") 
+    input(type="name", placeholder="Фамилия") 
+    p
+        input(type="radio", id="male")
+        label(for="male") Мужчина  
+    p
+        input(type="radio", id="female")
+        label(for="female") Женщина
+    p  
+        label(class="card__label") Дата рождения 
+            input(type="date")
+    p  
+        label(class="card__label") Данные для входа в сервис
+            input(type="email", placeholder="Email")
+            input(type="password", placeholder="Пароль")
+    label(for="toggle" class="switch")
+        input(type="checkbox", id="toggle")
+        span(class="slider")        
+        
