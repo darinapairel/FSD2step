@@ -1,4 +1,4 @@
-div(class='card card__check-in-out-form')
+div(class='card')
     h1(class='card__title') Регистрация аккаунта
     input(type="name", placeholder="Имя") 
     input(type="name", placeholder="Фамилия") 
@@ -17,5 +17,9 @@ div(class='card card__check-in-out-form')
             input(type="password", placeholder="Пароль")
     label(for="toggle" class="switch")
         input(type="checkbox", id="toggle")
-        span(class="slider")        
+        span(class="slider") 
+    button(class='card__submit-button') Перейти к оплате
+    p
+        span Уже есть аккаунт на Toxin
+        button(class="card__secondary-button") Войти
         

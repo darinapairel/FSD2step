@@ -55,7 +55,21 @@ module.exports = {
         options:{
           pretty:true
         }
-      }
+      },
+      {
+        test: /\.less$/,
+        use: [
+          {
+            loader: 'style-loader',
+          },
+          {
+            loader: 'css-loader',
+          },
+          {
+            loader: 'less-loader', 
+          },
+        ],
+      },
     ]
   },
   plugins: [ 
@@ -76,6 +90,14 @@ module.exports = {
       {
         from: './src/img',
         to: './img'
+      },
+      {
+        from: './src/js',
+        to: './js'
+      },
+      {
+        from: './src/scss/',
+        to: './styles'
       }
     ])
   ].concat(htmlPlugins)

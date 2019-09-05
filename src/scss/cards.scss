@@ -25,14 +25,14 @@
     background-color: rgba(31, 32, 65, 0.25);
     -webkit-transition: .4s;
     transition: .4s;
-  border: 1px solid rgba(31, 32, 65, 0.25);
+    border: 1px solid rgba(31, 32, 65, 0.25);
     border-radius: 10px;
   }
-  input:checked + .slider {
+input:checked + .slider {
     background-color:rgba(31, 32, 65, 0.5);;
   }
   
-  input:focus + .slider {
+input:focus + .slider {
     box-shadow: 0 0 1px rgba(31, 32, 65, 0.5);
   }
 input:checked + .slider:before {
