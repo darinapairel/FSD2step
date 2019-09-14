@@ -1,0 +1,31 @@
+
+.carousel{
+    width: 270px;
+    height: 151.38px;
+}
+img{
+    width: 270px;
+    height: 151.38px !important;
+}
+
+.slick-prev{
+    z-index:99;
+    &:before{
+        position: relative;
+        left: 25px;
+    }
+}
+.slick-next:before{
+    position: relative;
+    left: -25px;
+}
+.rate-base-layer{
+    span{
+        color:$purple;
+    }
+}
+.rate-select-layer{
+    span{
+        color:$purple;
+    }
+}

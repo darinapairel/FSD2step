@@ -4,9 +4,9 @@ mixin room-card(roomNum, roomPrice, roomType, roomPriceTotal, fee, priceTotal)
             p.room
                 span.room__number №
                 span.room__figures= roomNum
-                span.room__type люкс
+                span.room__type= roomType
         
-            p.price")
+            p.price
                 span.price__num= roomPrice
                 span.price__words в сутки
         
@@ -43,11 +43,5 @@ mixin room-card(roomNum, roomPrice, roomType, roomPriceTotal, fee, priceTotal)
                 span= priceTotal
             button.card__submit-button Забронировать    
 
-- var roomPrice = "9 990₽",
-      roomNum = 888,
-      roomType = "люкс",
-      roomPriceTotal = "39 960₽",
-      fee = "300₽",
-      priceTotal = "38 081₽";
 
-+room-card(roomPrice, roomNum, roomPriceTotal, fee, priceTotal)       
++room-card("9 990₽", 888, "люкс", "39 960₽", "300₽", "38 081₽")       

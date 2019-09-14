@@ -1,0 +1,102 @@
+script(src="../../../../libs/jquery-nice-select-1.1.0/js/jquery.nice-select.min.js")
+link(rel="stylesheet", href="../../../../libs/jquery-nice-select-1.1.0/css/nice-select.css")
+
+mixin select(num, selTitle, args)
+    - var button = `
+    - <button class=plus> + </button>
+    - <span class=count></span>
+    - <button class=minus> - </button>
+    - `;
+
+    select.select
+        div
+            option.opt(disabled selected)= selTitle
+            - for (var a=0; a < args.length; a++)
+                each val,key in args[a]
+                    - var value = val+ button
+                    option(value=key)= value  
+
++select(3, 'сколько гостей', [{'adults':'взрослые'}, {'children':'дети'}, {'babies':'младенцы'}])
+
+mixin inputDate
+    input.date(type="text", placeholder="ДД.ММ.ГГГГ")  
+
++inputDate
+
+mixin dateDropdown(name)
+    input(type="date", name=name)
+    
++dateDropdown('from') 
+
+mixin subscribeInp
+    span.input
+        input(type="email")
+        button.input_icon(type="submit")
+            include ../../../img/arrow_forward.pug
+            +arrow_forward('#BC9CFF','#8BA4F9')
+
++subscribeInp
+
+mixin checkbox(id, label)
+    .row
+        input(type="checkbox", id=id)
+        label(for=id)= label
+
++checkbox('smoking','Можно курить')  
+
+mixin radioBtn(id, label)
+    label.container(for=id)= label
+        input(type="radio", id=id)
+        span.checkmark
+       
++radioBtn("male","Мужчина")   
+
+mixin toggle(id)
+    label(for=id class="switch")
+        input(type="checkbox", id=id)
+        span(class="slider") 
++toggle('toggle')
+
+//- types for buttonSecondary: 
+//- card__secondary-button
+//- card__secondary-button_filled
+mixin buttonSecondary(content, type)
+    if type === 'card__secondary-button'
+        button.card__secondary-button= content
+    else
+        div.button_fill    
+            button.card__secondary-button_filled= content
+
++buttonSecondary('Войти', 'card__secondary-button_filled')    
++buttonSecondary('Войти', 'card__secondary-button')    
+
+mixin link(content)
+    button.link=content
++link("click me")
+
+mixin buttonSubmit(content)
+    button.card__submit-button(type="submit")= content
++buttonSubmit('Перейти к оплате')
+
+      
+
+mixin expandable-checkbox-list(args)    
+    - var isVisiable=false
+    .expanded-checkbox
+        button.expanded-button(onClick=`()=>isVisiable=true`) Показать доп. опции
+        if isVisiable === true
+            .expanded-div
+                - for (var a=0; a < args.length; a++)
+                            each val,key in args[a]
+                                .row
+                                    input(type="checkbox", id=key)
+                                    label(for=key)=  val                          
+
++expandable-checkbox-list([{1:'Завтрак'}, {2:'Письменный стол'}])
+
+mixin range(rangeId='range-price', valueId='range-value')
+    .range
+        div.range-value(id=valueId)
+        div(id=rangeId)
+    
++range  

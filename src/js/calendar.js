@@ -1,3 +1,6 @@
+import 'pg-calendar'
+import 'moment';
+
 $(document).ready(function() {
     $('.calendar').pignoseCalendar({
         lang:"ru",

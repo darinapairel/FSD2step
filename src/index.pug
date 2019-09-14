@@ -3,11 +3,14 @@ html
     head
         meta(charset="UTF-8")
         meta(name="viewport" content="width=device-width, initial-scale=1.0") 
-        meta(http-equiv="X-UA-Compatible" content="ie=edge") 
-        link(rel="stylesheet" href='#{htmlWebpackPlugin.files.chunks.main.css}')
+        meta(http-equiv="X-UA-Compatible" content="ie=edge")
+        //- paste link here for styles priority 
+        link(rel="stylesheet", href="../../../../node_modules/pg-calendar/dist/css/pignose.calendar.css") 
+        link(rel="stylesheet" href='./css/style.bundle.css')
         title Toxin
 
     body
-        script(src='#{htmlWebpackPlugin.files.chunks.main.entry}')
+        script(src='./js/bundle.js')
+
         include ../src/html/views/test.pug
 

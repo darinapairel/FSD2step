@@ -1,3 +1,5 @@
+import "../../libs/slick-1.8.1/slick/slick"
+import "../../libs/rater-master/rater"
 $(document).ready(function(){
     $('.carousel').slick({
         slidesToShow: 1,

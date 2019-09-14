@@ -1,9 +1,10 @@
 // webpack v4
-const path = require('path');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CopyWebpackPlugin= require('copy-webpack-plugin');
-const fs = require('fs');
+const webpack = require('webpack')    
+const path = require("path");
+const fs = require("fs");
+const CopyWebpackPlugin = require("copy-webpack-plugin");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 function generateHtmlPlugins(templateDir) {
   const templateFiles = fs.readdirSync(path.resolve(__dirname, templateDir));
@@ -22,32 +23,66 @@ function generateHtmlPlugins(templateDir) {
 const htmlPlugins = generateHtmlPlugins('./src/html/views')
 
 module.exports = {
-  entry: { main: './src/index.js' },
+  entry: ["./src/index.js", "./src/scss/style.scss"],
   output: {
-    path: path.resolve(__dirname, 'dist'),
-    filename: '[name].[chunkhash].js'
+    filename: "./js/bundle.js"
   },
   module: {
     rules: [
-      {
-        test: /\.html$/,
-        include: path.resolve(__dirname, 'src/html/components'),
-        use: ['raw-loader']
-      },
+      
       {
         test: /\.js$/,
         exclude: /node_modules/,
         use: {
           loader: "babel-loader"
-        }
+        },
       },
       {
         test: /\.scss$/,
-        use: ExtractTextPlugin.extract(
+        include: path.resolve(__dirname, "src/scss"),
+        use: [
           {
-            fallback: 'style-loader',
-            use: ['css-loader', 'sass-loader', "clean-css-loader"]
-          })
+            loader: MiniCssExtractPlugin.loader,
+            options: {}
+          },
+          {
+            loader: "css-loader",
+            options: {
+              sourceMap: true,
+              url: false
+            }
+          },
+          {
+            loader: "postcss-loader",
+            options: {
+              ident: "postcss",
+              sourceMap: true,
+              plugins: () => [
+                require("cssnano")({
+                  preset: [
+                    "default",
+                    {
+                      discardComments: {
+                        removeAll: true
+                      }
+                    }
+                  ]
+                })
+              ]
+            }
+          },
+          {
+            loader: "sass-loader",
+            options: {
+              sourceMap: true
+            }
+          }
+        ]
+      },
+      {
+        test: /\.html$/,
+        include: path.resolve(__dirname, "src/html/components"),
+        use: ["raw-loader"]
       },
       {
         test: /\.pug$/,
@@ -55,51 +90,35 @@ module.exports = {
         options:{
           pretty:true
         }
-      },
-      {
-        test: /\.less$/,
-        use: [
-          {
-            loader: 'style-loader',
-          },
-          {
-            loader: 'css-loader',
-          },
-          {
-            loader: 'less-loader', 
-          },
-        ],
-      },
+      }
     ]
   },
-  plugins: [ 
-    new ExtractTextPlugin({filename: 'style.css'}),
+  plugins: [
+    new webpack.ProvidePlugin({
+      $: "jquery",
+      jQuery: "jquery"
+    }),
+    new MiniCssExtractPlugin({
+      filename: "./css/style.bundle.css"
+    }),
     new HtmlWebpackPlugin({
-        inject: false,
-        hash: true,
-        template: './src/index.pug'
-      }),
-      new CopyWebpackPlugin([{
-        from: './src/fonts',
-        to: './fonts'
+      inject: false,
+      hash: true,
+      template: './src/index.pug'
+    }),
+    new CopyWebpackPlugin([
+      {
+        from: "./src/fonts",
+        to: "./fonts"
       },
       {
-        from: './src/favicon',
-        to: './favicon'
+        from: "./src/favicon",
+        to: "./favicon"
       },
       {
-        from: './src/img',
-        to: './img'
-      },
-      {
-        from: './src/js',
-        to: './js'
-      },
-      {
-        from: './src/scss/',
-        to: './styles'
+        from: "./src/img",
+        to: "./img"
       }
     ])
   ].concat(htmlPlugins)
-  
 };
