@@ -81,22 +81,38 @@ mixin buttonSubmit(content)
       
 
 mixin expandable-checkbox-list(args)    
-    - var isVisiable=false
+    - var isVisible=false
     .expanded-checkbox
-        button.expanded-button(onClick=`()=>isVisiable=true`) Показать доп. опции
-        if isVisiable === true
-            .expanded-div
-                - for (var a=0; a < args.length; a++)
-                            each val,key in args[a]
-                                .row
-                                    input(type="checkbox", id=key)
-                                    label(for=key)=  val                          
+        button.expanded-button Показать доп. опции
+        .expanded-div
+            - for (var a=0; a < args.length; a++)
+                        each val,key in args[a]
+                            .row
+                                input(type="checkbox", id=key)
+                                label(for=key)=  val                          
 
 +expandable-checkbox-list([{1:'Завтрак'}, {2:'Письменный стол'}])
+
+
+mixin expandable-rich-checkbox-list(args)    
+    - var isVisible=false
+    .expanded-checkbox
+        button.expanded-button Показать доп. опции
+        .expanded-div
+            - for (var a=0; a < args.length; a++)
+                        each val,key in args[a]
+                            .row
+                                input(type="checkbox", id=key)
+                                label(for=key)=  val[0]
+                                    p.rich-text= val[1]       
+
++expandable-rich-checkbox-list([{'breakfast':['Завтрак', 'С доставкой в номер']}, {'table':['Письменный стол', 'Удобный']}])
 
 mixin range(rangeId='range-price', valueId='range-value')
     .range
         div.range-value(id=valueId)
         div(id=rangeId)
     
-+range  
++range 
+
+// mixin bullet-list()

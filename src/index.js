@@ -1,7 +1,8 @@
-import "./scss/style.scss";
+import './scss/style.scss';
 import './js/inpMask.js';
 import './js/calendar.js';
 import './js/carousel.js';
 import './js/range.js';
-import './js/option';
+import './js/option.js';
+import './js/expandable.js';
 
