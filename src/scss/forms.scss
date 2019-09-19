@@ -123,6 +123,7 @@ input{
         display: inline-block;
         position: absolute;
         right: 2px;
+        top: -11px;
         border: 0;
         background: transparent;
         padding: 0;
@@ -213,6 +214,11 @@ input{
     &:active{
         background: linear-gradient(180deg, rgba(188, 156, 255, 0.25) 0%, rgba(139, 164, 249, 0.25) 100%);
     }
+    &.small{
+        width: 79px;
+        height: 34px;
+        font-size: 12px;
+    }
 }
 
 .button_fill{
@@ -221,6 +227,8 @@ input{
             background: linear-gradient(180deg, rgba(188, 156, 255,0.5) 0%, rgba(139, 164, 249,0.5) 100%);
         }
     }
+    
+    display: inline-block;
     position: relative;
     box-sizing: border-box;
     width:99px;
@@ -228,7 +236,10 @@ input{
     background-clip: padding-box; /* !importanté */
     border: solid 2px transparent; /* !importanté */
     border-radius: 22px;
-  
+    &.small{
+        width: 79px;
+    }
+
     &:before {
         content: '';
         position: absolute;
@@ -240,10 +251,17 @@ input{
     }
     button.card__secondary-button_filled{
         color: $purple;
+        text-transform: uppercase; 
         width: 99px;
         height: 44px;
         border: none;
         background:transparent;
+        &.small{
+            width: 79px;
+            height: 34px;
+            font-size: 12px;
+        }
+        
     }
 }
   
@@ -305,4 +323,18 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     margin:0;
     color:$dark-shade-50;
 
+}
+
+ul.bullet-list{
+    color: $dark-shade-75;
+    list-style: none;  
+    .list-item::before{
+        background-color: $dark-shade-25;
+        content: "";
+        display: inline-block;
+        width: 10.43px;
+        height: 10px; 
+        border-radius: 100%; 
+        margin-right: 10.5px;      
+    }
 }

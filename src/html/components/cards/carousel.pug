@@ -1,13 +1,10 @@
-link(rel="stylesheet", href="../../../../libs/slick-1.8.1/slick/slick-theme.css")
-link(rel="stylesheet", href="../../../../libs/slick-1.8.1/slick/slick.css")
-
 mixin suit-mini-card(imagesForSlider, roomNum, price, rating)
 
     .container
         .carousel
-            img(src=imagesForSlider[0], alt="1")
-            img(src=imagesForSlider[1], alt="2")    
-            img(src=imagesForSlider[2], alt="3") 
+            img.imagesForSlider(src=imagesForSlider[0], alt="1")
+            img.imagesForSlider(src=imagesForSlider[1], alt="2")    
+            img.imagesForSlider(src=imagesForSlider[2], alt="3") 
         .under-carousel
             p.room-info
                 span.room-info__num №

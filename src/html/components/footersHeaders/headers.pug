@@ -1,0 +1,26 @@
+mixin header-login(logged, name='')
+    nav 
+        img.logo_img(src="../../../img/Logo.svg", alt="logo")
+        ul  
+            li Home
+            li About Us
+            li Servises
+                span.expand_arrow
+                    img(src="../../../img/expand_more.png", alt="arrow")
+            li Careers  
+            li News
+            li Documentation
+            li
+            if (!logged)
+                span.button-set
+                    button.card__secondary-button.small Login
+                    .button_fill.small  
+                        button.card__secondary-button_filled.small Register
+            else
+                span.loggedName= name            
+
+        
+
+
+//- +header-login(true, 'Cosmin Negoita')
+//- +header-login(false)

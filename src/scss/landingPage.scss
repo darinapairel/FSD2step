@@ -1,0 +1,34 @@
+.landing__slider {
+    height:860px;
+    .mainSlider{        
+        .mainSlider__image{
+            &#image-1{
+                background: url('../img/background-img1.png') no-repeat
+            }
+            
+            &#image-2{
+                background: url('../img/background-img2.png') no-repeat
+            }
+            
+            &#image-3{
+                background: url('../img/background-img3.png') no-repeat
+            }
+            min-height: 1022px;
+            min-width: 1449px;
+            
+        }
+        .slick-slide {
+            min-width: 1449px;
+            min-height: 1022px;
+        }
+    }
+
+
+}
+.landing__footer{
+    position: absolute;
+    left: 0;
+    z-index: 1;
+    right: 0;
+    background: #fff
+}

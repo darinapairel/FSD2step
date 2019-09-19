@@ -7,10 +7,16 @@ html
         //- paste link here for styles priority 
         link(rel="stylesheet", href="../../../../node_modules/pg-calendar/dist/css/pignose.calendar.css") 
         link(rel="stylesheet" href='./css/style.bundle.css')
+        link(rel="stylesheet", href="../../../../libs/slick-1.8.1/slick/slick-theme.css")
+        link(rel="stylesheet", href="../../../../libs/slick-1.8.1/slick/slick.css")
         title Toxin
 
     body
         script(src='./js/bundle.js')
+        //- include ../src/html/components/footersHeaders/headers.pug
+        //- +header-login(true, 'Cosmin Negoita')      
+        
+        //- include ../src/html/components/footersHeaders/footers.pug
+        //- +footer-extended()    
 
-        include ../src/html/views/test.pug
-
+        include html/views/template.pug

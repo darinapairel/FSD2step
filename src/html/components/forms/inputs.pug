@@ -16,46 +16,46 @@ mixin select(num, selTitle, args)
                     - var value = val+ button
                     option(value=key)= value  
 
-+select(3, 'сколько гостей', [{'adults':'взрослые'}, {'children':'дети'}, {'babies':'младенцы'}])
+//- +select(3, 'сколько гостей', [{'adults':'взрослые'}, {'children':'дети'}, {'babies':'младенцы'}])
 
 mixin inputDate
     input.date(type="text", placeholder="ДД.ММ.ГГГГ")  
 
-+inputDate
+//- +inputDate
 
 mixin dateDropdown(name)
     input(type="date", name=name)
     
-+dateDropdown('from') 
+//- +dateDropdown('from') 
 
-mixin subscribeInp
+mixin subscribeInp(placeholder)
     span.input
-        input(type="email")
+        input(type="email", placeholder=placeholder)
         button.input_icon(type="submit")
             include ../../../img/arrow_forward.pug
             +arrow_forward('#BC9CFF','#8BA4F9')
 
-+subscribeInp
+//- +subscribeInp('Email')
 
 mixin checkbox(id, label)
     .row
         input(type="checkbox", id=id)
         label(for=id)= label
 
-+checkbox('smoking','Можно курить')  
+//- +checkbox('smoking','Можно курить')  
 
 mixin radioBtn(id, label)
     label.container(for=id)= label
         input(type="radio", id=id)
         span.checkmark
        
-+radioBtn("male","Мужчина")   
+//- +radioBtn("male","Мужчина")   
 
 mixin toggle(id)
     label(for=id class="switch")
         input(type="checkbox", id=id)
         span(class="slider") 
-+toggle('toggle')
+//- +toggle('toggle')
 
 //- types for buttonSecondary: 
 //- card__secondary-button
@@ -67,16 +67,16 @@ mixin buttonSecondary(content, type)
         div.button_fill    
             button.card__secondary-button_filled= content
 
-+buttonSecondary('Войти', 'card__secondary-button_filled')    
-+buttonSecondary('Войти', 'card__secondary-button')    
+//- +buttonSecondary('Войти', 'card__secondary-button_filled')    
+//- +buttonSecondary('Войти', 'card__secondary-button')    
 
 mixin link(content)
     button.link=content
-+link("click me")
+//- +link("click me")
 
 mixin buttonSubmit(content)
     button.card__submit-button(type="submit")= content
-+buttonSubmit('Перейти к оплате')
+//- +buttonSubmit('Перейти к оплате')
 
       
 
@@ -91,7 +91,7 @@ mixin expandable-checkbox-list(args)
                                 input(type="checkbox", id=key)
                                 label(for=key)=  val                          
 
-+expandable-checkbox-list([{1:'Завтрак'}, {2:'Письменный стол'}])
+//- +expandable-checkbox-list([{1:'Завтрак'}, {2:'Письменный стол'}])
 
 
 mixin expandable-rich-checkbox-list(args)    
@@ -106,13 +106,19 @@ mixin expandable-rich-checkbox-list(args)
                                 label(for=key)=  val[0]
                                     p.rich-text= val[1]       
 
-+expandable-rich-checkbox-list([{'breakfast':['Завтрак', 'С доставкой в номер']}, {'table':['Письменный стол', 'Удобный']}])
+//-+expandable-rich-checkbox-list([{'breakfast':['Завтрак', 'С доставкой в номер']}, {'table':['Письменный стол', 'Удобный']}])
+
+mixin bullet-list(...texts)
+    ul.bullet-list
+        - for (var t of texts)
+            li.list-item= t 
+
+//-+bullet-list('Нельзя с питомцами','Без вечеринок и мероприятий','Время прибытия - после 13 а выезд до 12')            
+
 
 mixin range(rangeId='range-price', valueId='range-value')
     .range
         div.range-value(id=valueId)
         div(id=rangeId)
     
-+range 
-
-// mixin bullet-list()
+//-+range 
