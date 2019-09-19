@@ -1,29 +1,45 @@
-.landing__slider {
-    height:860px;
-    .mainSlider{        
-        .mainSlider__image{
-            &#image-1{
-                background: url('../img/background-img1.png') no-repeat
-            }
-            
-            &#image-2{
-                background: url('../img/background-img2.png') no-repeat
-            }
-            
-            &#image-3{
-                background: url('../img/background-img3.png') no-repeat
-            }
-            min-height: 1022px;
-            min-width: 1449px;
-            
-        }
-        .slick-slide {
-            min-width: 1449px;
-            min-height: 1022px;
+.landing__content{    
+    .landing__card{
+        position: absolute;
+        z-index:1;
+        top: 140px;
+        left: 140px;
+        .card{
+            width: 380px;
+            height: 374px;
         }
     }
+    .landing__slider {
+        height:860px;
+        .mainSlider{        
+            .mainSlider__image{
+                &#image-1{
+                    background: url('../img/background-img1.png') no-repeat;
+                    background-size: cover;
+        
+                }
+                
+                &#image-2{
+                    background: url('../img/background-img2.png') no-repeat;
+                    background-size: cover;
+                }
+                
+                &#image-3{
+                    background: url('../img/background-img3.png') no-repeat;
+                    background-size: cover;
+                }
+                height: 860px;
+                width: 100vw;
+                
+            }
+            .slick-slide {
+                width: 100vw;
+                height: 860px;
+            }
+        }
 
 
+    }
 }
 .landing__footer{
     position: absolute;

@@ -20,6 +20,27 @@
       }
     }
 }
+.card{
+  box-sizing: border-box;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  background:#fff;
+  padding: 40px 30px;
+  span{
+      display: flex;
+      flex-direction: row;
+      .card__label{
+        &:nth-child(1){
+          padding-right: 20px;
+        }
+        
+        display: block;
+        input{
+          display: inherit
+      }
+    }
+  }
+}
 .slider{ 
     position: absolute;   
     border: 1px solid rgba(31, 32, 65, 0.25);
