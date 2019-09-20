@@ -1,3 +1,5 @@
+@import '../../node_modules/jquery-ui/themes/base/all.css';
+@import '../../libs/noUiSlider-14.0.2/distribute/nouislider.css';
 @import 'base';
 @import 'forms';
 @import 'calendar';
@@ -5,7 +7,4 @@
 @import 'cards';
 @import 'headers';
 @import 'footers';
-@import '../../node_modules/jquery-ui/themes/base/all.css';
-@import '../../libs/noUiSlider-14.0.2/distribute/nouislider.css';
-
 @import 'landingPage';

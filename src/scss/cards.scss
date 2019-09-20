@@ -29,11 +29,9 @@
   span{
       display: flex;
       flex-direction: row;
-      .card__label{
-        &:nth-child(1){
-          padding-right: 20px;
-        }
-        
+      flex-wrap: wrap;
+      justify-content: space-between;
+      .card__label{        
         display: block;
         input{
           display: inherit

@@ -3,7 +3,7 @@
     box-sizing: border-box;
     padding:12px;
     height: 44px;
-    width: 320px;
+    max-width: 320px;
     border-radius: 4px;
     border: 1px solid $dark-shade-25;  
 }
@@ -280,7 +280,8 @@ input{
     color: #fff;
     text-transform: uppercase;
     border:none;
-    width: 320px;
+    max-width: 320px;
+    min-width: 195px;
     height: 44px;
     background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
     border-radius: 22px;

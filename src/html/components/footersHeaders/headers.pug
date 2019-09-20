@@ -1,7 +1,9 @@
 mixin header-login(logged, name='')
     nav 
         img.logo_img(src="../../../img/Logo.svg", alt="logo")
-        ul  
+        span#burgeer ----
+        span#close x
+        ul#header-menu  
             li Home
             li About Us
             li Servises
@@ -17,7 +19,8 @@ mixin header-login(logged, name='')
                     .button_fill.small  
                         button.card__secondary-button_filled.small Register
             else
-                span.loggedName= name            
+                span.loggedName= name 
+                           
 
         
 

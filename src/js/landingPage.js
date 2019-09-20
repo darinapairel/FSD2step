@@ -1,10 +1,14 @@
 $(document).ready(function(){
     $('.mainSlider').slick({
         slidesToShow: 1,
+        slidesToScroll: 1,
         centerMode: true,
-        variableWidth: true,
+        infinite:true,
         autoplay:true,
         autoplaySpeed:5000,
-        arrows:false,
+        arrows:false,        
+        cssEase: 'linear',
+        variableWidth: true,
+
     });
 });

@@ -32,3 +32,17 @@ h3{
 body{
 
 }
+$s-screen: 425px;
+$l-screen: 1024px;
+
+@mixin respond-to($screenSize){
+    @if $screenSize == handhelds{
+        @media (max-width:$s-screen){@content;};
+    }
+    @else if $screenSize == medium-screens{
+        @media (min-width:$s-screen + 1) and (max-width:$l-screen - 1){@content;};
+    }
+    @else if $screenSize == wide-screens{
+        @media (min-width:$l-screen) {@content;};
+    }
+}
