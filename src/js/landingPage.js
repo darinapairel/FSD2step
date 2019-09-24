@@ -9,6 +9,8 @@ $(document).ready(function(){
         arrows:false,        
         cssEase: 'linear',
         variableWidth: true,
+        adaptiveHeight:false
 
     });
+
 });

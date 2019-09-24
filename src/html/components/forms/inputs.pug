@@ -1,14 +1,16 @@
 script(src="../../../../libs/jquery-nice-select-1.1.0/js/jquery.nice-select.min.js")
 link(rel="stylesheet", href="../../../../libs/jquery-nice-select-1.1.0/css/nice-select.css")
+link(rel="stylesheet", href="../../../../libs/jquery-nice-select-master/css/nice-search-multiple.css")
 
 mixin select(num, selTitle, args)
     - var button = `
-    - <button class=plus> + </button>
-    - <span class=count></span>
-    - <button class=minus> - </button>
+    - <span class="btn-group">
+    - <button class='btn-group__btn plus'> + </button>
+    - <span class=count>0</span>
+    - <button class='btn-group__btn minus'> - </button>
+    - </span>
     - `;
-
-    select.select
+    select.select(multiple)
         div
             option.opt(disabled selected)= selTitle
             - for (var a=0; a < args.length; a++)
@@ -16,7 +18,7 @@ mixin select(num, selTitle, args)
                     - var value = val+ button
                     option(value=key)= value  
 
-//- +select(3, 'сколько гостей', [{'adults':'взрослые'}, {'children':'дети'}, {'babies':'младенцы'}])
+//+select(3, 'сколько гостей', [{'adults':'взрослые'}, {'children':'дети'}, {'babies':'младенцы'}])
 
 mixin inputDate
     input.date(type="text", placeholder="ДД.ММ.ГГГГ")  

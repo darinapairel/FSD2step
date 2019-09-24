@@ -3,6 +3,16 @@
     width: 270px;
     height: 151.38px;
 }
+
+.slick-slide {
+    height: auto; 
+  }
+  .slick-track {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: stretch;
+  }
 img.imagesForSlider{
     width: 270px;
     height: 151.38px !important;

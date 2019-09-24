@@ -1,6 +1,13 @@
-div(class="calendar-container")
-    div(class="calendar")
-    div(class="calendar-buttons")
-        button(class="calendar-buttons__btn calendar-buttons__btn_grey") Очистить
-        button(class="calendar-buttons__btn calendar-buttons__btn_purple") Применить
-script(src="../../../../node_modules/pg-calendar/dist/js/pignose.calendar.min.js")
+mixin calendar-inputs()
+    .calendar  
+        label(class="card__label") 
+            h3 Прибытие
+            span
+                input.calendar__inp#calendar__input-first(placeholder="ДД.MМ.ГГГГ" name="daterange" )
+                button.calendar__icon
+        label(class="card__label") 
+            h3 Выезд
+            span
+                input.calendar__inp#calendar__input-second(placeholder="ДД.MМ.ГГГГ" name="daterange" )
+                button.calendar__icon    
+    script(src="../../../../libs/daterangepicker-master/daterangepicker.js")

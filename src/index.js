@@ -1,3 +1,4 @@
+import 'jquery'
 import './scss/style.scss';
 import './js/inpMask.js';
 import './js/calendar.js';

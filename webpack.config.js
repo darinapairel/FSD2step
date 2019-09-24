@@ -1,5 +1,5 @@
 // webpack v4
-const webpack = require('webpack')    
+const webpack = require('webpack');   
 const path = require("path");
 const fs = require("fs");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
@@ -95,8 +95,9 @@ module.exports = {
   },
   plugins: [
     new webpack.ProvidePlugin({
-      $: "jquery",
-      jQuery: "jquery"
+      $: 'jquery',
+      jQuery: 'jquery',
+      'window.jQuery': 'jquery'
     }),
     new MiniCssExtractPlugin({
       filename: "./css/style.bundle.css"
@@ -110,10 +111,6 @@ module.exports = {
       {
         from: "./src/fonts",
         to: "./fonts"
-      },
-      {
-        from: "./src/favicon",
-        to: "./favicon"
       },
       {
         from: "./src/img",
