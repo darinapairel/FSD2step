@@ -1,4 +1,4 @@
-import "../../libs/jquery.maskedinput-master/dist/jquery.maskedinput.js";
+import "../../libs/jquery.maskedinput-master/src/jquery.maskedinput.js";
 
 $(document).ready(function(){
     $(".date").mask(

@@ -1,0 +1,9 @@
+include ../components/forms/inputs.pug
+.searchRoom
+    .searchRoom__aside
+        +filterDateDropdown('calendar__input-filter')
+        span(class="card__label-wide")
+            h3 Гости
+            +select('wide', 3, 'сколько гостей', [{'adults':'взрослые'}, {'children':'дети'}, {'babies':'младенцы'}])
+    .searchRoom__cards
+        p dfsdffsfsfd

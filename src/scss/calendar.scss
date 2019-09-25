@@ -98,6 +98,10 @@
         display: inherit;
     }
 }
+.card__label-wide{
+    @extend .card__label;
+    max-width: 266px !important;;   
+}
 .calendar-buttons__btn{
     background: transparent;
     border: none;

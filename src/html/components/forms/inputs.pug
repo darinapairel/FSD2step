@@ -1,8 +1,8 @@
 script(src="../../../../libs/jquery-nice-select-1.1.0/js/jquery.nice-select.min.js")
-link(rel="stylesheet", href="../../../../libs/jquery-nice-select-1.1.0/css/nice-select.css")
+link(rel="stylesheet", href="../../../../libs/jquery-nice-select-master/css/nice-select.css")
 link(rel="stylesheet", href="../../../../libs/jquery-nice-select-master/css/nice-search-multiple.css")
 
-mixin select(num, selTitle, args)
+mixin select(className='', num, selTitle, args)
     - var button = `
     - <span class="btn-group">
     - <button class='btn-group__btn plus'> + </button>
@@ -10,7 +10,7 @@ mixin select(num, selTitle, args)
     - <button class='btn-group__btn minus'> - </button>
     - </span>
     - `;
-    select.select(multiple)
+    select.select(multiple, class=className)
         div
             option.opt(disabled selected)= selTitle
             - for (var a=0; a < args.length; a++)
@@ -24,6 +24,16 @@ mixin inputDate
     input.date(type="text", placeholder="ДД.ММ.ГГГГ")  
 
 //- +inputDate
+
+mixin filterDateDropdown(id)
+    .calendar
+        label(class="card__label-wide") 
+            h3 даты пребывания в отеле
+            span.input
+                input.calendar__inp.calendar__inp-filter(id=id, placeholder="ДД.MМ.ГГГГ" name="daterange" )
+                button.calendar__icon
+
+//- +filterDateDropdown('calendar__input-filter')
 
 mixin dateDropdown(name)
     input(type="date", name=name)

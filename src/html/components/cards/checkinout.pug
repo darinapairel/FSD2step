@@ -6,6 +6,6 @@ div(class='card')
     include ../forms/inputs.pug
     span(class="card__label")
         h3 Гости
-        +select(3, 'сколько гостей', [{'adults':'взрослые'}, {'children':'дети'}, {'babies':'младенцы'}])
+        +select('', 3, 'сколько гостей', [{'adults':'взрослые'}, {'children':'дети'}, {'babies':'младенцы'}])
 
     button(class='card__submit-button') Подобрать номер                    

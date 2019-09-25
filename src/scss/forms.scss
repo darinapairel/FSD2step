@@ -36,9 +36,13 @@ div.nice-select{
         box-sizing: border-box;
         box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);   
         border-radius: 0;
-        margin-top: -2px;
-        left: -1px;
+        margin-top: -2px !important;
+        left: -1px !important;
+
     }
+}
+.nice-select.wide .list {
+    max-width: 266px;
 }
 .expanded-checkbox{
     width: 320px;
@@ -113,7 +117,7 @@ input{
         }
 
     } 
-    &[type="date"], &.calendar__inp{
+    &[type="date"]{
         &::-webkit-inner-spin-button, &::-webkit-calendar-picker-indicator { 
             display: none; 
         }
@@ -123,6 +127,16 @@ input{
         text-transform: uppercase;
     }
 }
+
+.calendar__inp{
+    width: inherit;
+    cursor: pointer;
+}
+
+.calendar__inp-filter{ 
+    min-width: 266px;
+    box-sizing: border-box;
+ }
 
     
 .calendar__icon{
@@ -135,6 +149,7 @@ input{
     background: url("../img/expand_more.png") no-repeat;
     width: 14px;
     height: 10px; 
+    padding: 12px;
 
 }
 
@@ -161,10 +176,7 @@ input{
         cursor: pointer;
     }
 }
-.input{
-    position: relative;
-    width: auto;
-}
+
 
 .row{
     margin-top: 5px;
@@ -380,4 +392,9 @@ ul.bullet-list{
         border-radius: 100%; 
         margin-right: 10.5px;      
     }
+}
+
+.input{
+    position: relative;
+    width: 266px;
 }
