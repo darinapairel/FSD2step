@@ -1,0 +1,54 @@
+mixin footer-extended(footerClass)
+    footer(class=footerClass)
+        .footer
+            .col
+                img.logo_img(src="../../../img/Logo.svg", alt="logo")
+                p.txt Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.
+            .col
+                h3 Navigation
+                ul 
+                    li About Us
+                    li News
+                    li Support
+                    li Products
+            .col
+                h3 Navigation
+                ul 
+                    li Who we are
+                    li Our team
+                    li Careers
+                    li Investors
+            .col
+                h3 Support
+                ul 
+                    li Documentation
+                    li Community
+                    li Get in Touch
+            .col
+                h3 Subscribe to our newsletter
+                p.txt Receive our latest news and promotions in your inbox!
+                include ../forms/inputs.pug
+                +subscribeInp('Your email address')
+        .footer__link
+            span.txt Copyright © 2018 Toxin UI Kit. All rights reserved.
+            span.links
+                a.links__link
+                    img(src="../../img/twitter.svg", alt="")
+                a.links__link
+                    img(src="../../img/Fb.svg", alt="")
+                a.links__link
+                    img(src="../../img/instagram.svg", alt="")
+//- +footer-extended()
+
+mixin lite-footer()
+    footer.footer-lite
+        img.logo_img(src="../../../img/Logo.svg", alt="logo")
+        p.txt Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.
+        .links
+            a.links__link
+                img(src="../../img/twitter.svg", alt="")
+            a.links__link
+                img(src="../../img/Fb.svg", alt="")
+            a.links__link
+                img(src="../../img/instagram.svg", alt="")        
+//- +lite-footer()

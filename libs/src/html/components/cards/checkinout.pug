@@ -1,0 +1,11 @@
+div(class='card') 
+    h1(class='card__title') Найдём номера под ваши пожелания
+    include ./calendar.pug
+    +calendar-inputs()
+    
+    include ../forms/inputs.pug
+    span(class="card__label")
+        h3 Гости
+        +select('', 3, 'сколько гостей', [{'adults':'взрослые'}, {'children':'дети'}, {'babies':'младенцы'}])
+
+    button(class='card__submit-button') Подобрать номер                    
