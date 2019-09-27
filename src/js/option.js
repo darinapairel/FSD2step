@@ -4,10 +4,14 @@ $(document).ready(function() {
   $('.nice-select ul.list').last().append('<div class="button-submit-group"><button class="link btn-submit">Подтвердить</button><button class="link btn-clear disabled">Отчистить</button></div>')
   
   $('.btn-submit').on('click', function(){
+    // var arrSel = [... document.querySelector('select')],
+    //     arrIsSelTypeInclude = arrSel.map((el)=>el.className.includes('select-beds'))
+
     var totalNumGuests = [...document.querySelectorAll('.count')]
     totalNumGuests = totalNumGuests.map((el)=>el.innerHTML).map((el)=>Number(el)).reduce((a,v)=>a +v)
     document.querySelector('.multiple-options').innerHTML = `Гостей: ${totalNumGuests}`;
   });
+
   
   function plusCounter(el) {
     var currentCount = 1;

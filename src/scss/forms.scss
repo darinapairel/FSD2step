@@ -15,6 +15,7 @@
 }
 div.nice-select{
     width: 320px;
+    min-height: 44px !important;
     padding: 3px 12px;
     @extend .styledSel;
     li.option{
@@ -81,9 +82,7 @@ div.nice-select{
 input{
     @extend .styledSel;
     &[type="checkbox"]{
-        opacity: 0;
-        width: 0;
-        height: 0;
+        display: none;
         &+label::before {
             position: absolute;
             top: -3px;
@@ -114,6 +113,8 @@ input{
         &+label{
             margin: 0 0 0 30px;
             position: relative;
+            display: inline-block;
+
         }
 
     } 
@@ -180,6 +181,8 @@ input{
 
 .row{
     margin-top: 5px;
+    color:$dark-shade-50;
+
 }
 
 .container{
@@ -365,19 +368,32 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
 }
 .range{
     max-width: 267px;
-    .range-value{
+    display: flex;
+    flex-direction: column;
+    .card__label-wide{
         margin-bottom:20px;
-        float:right;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        .range__title{
+            h3{
+                margin: 0;
+                padding: 0;
+            }
+        }
+        .range__value{
+            line-height: 15px;
+        }
+
     }
 }
 
 .rich-text{
-    padding-left: 41px;
-    padding-top: 8px;
-    padding-bottom: 11px;
-    margin:0;
-    color:$dark-shade-50;
-
+    padding-top: 5px;
+    margin: 0;
+    color: rgba(31,32,65,.5);
+    font-size: 12px;
+    line-height: 14px;
 }
 
 ul.bullet-list{

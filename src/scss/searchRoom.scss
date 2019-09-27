@@ -4,8 +4,13 @@
     padding: 30px 9.7vw;
     .searchRoom__aside{
         flex-basis: 266px;
+        .bottom-text{ 
+            margin-top: 14px;
+            color: rgba(31,32,65,.5);
+        }
     }
     .searchRoom__cards{
 
     }
 }
+

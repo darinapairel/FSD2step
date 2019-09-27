@@ -1,4 +1,3 @@
-script(src="../../../../libs/jquery-nice-select-1.1.0/js/jquery.nice-select.min.js")
 link(rel="stylesheet", href="../../../../libs/jquery-nice-select-master/css/nice-select.css")
 link(rel="stylesheet", href="../../../../libs/jquery-nice-select-master/css/nice-search-multiple.css")
 
@@ -49,12 +48,29 @@ mixin subscribeInp(placeholder)
 
 //- +subscribeInp('Email')
 
-mixin checkbox(id, label)
-    .row
-        input(type="checkbox", id=id)
-        label(for=id)= label
+mixin checkbox(args)
 
-//- +checkbox('smoking','Можно курить')  
+    h3 Checkbox buttons
+    .checkbox-buttons
+        - for (var a=0; a < args.length; a++)
+            each val,key in args[a]
+                .row
+                    input(type="checkbox", id=key)
+                    label(for=key)= val        
+
+//- +checkbox({['smoking','Можно курить']})
+
+mixin rich-checkbox(args)
+    h3 Доступность
+    .rich-checkbox
+        - for (var a=0; a < args.length; a++)
+            each val,key in args[a]
+                .row
+                    input(type="checkbox", id=key)
+                    label(for=key)=  val[0]
+                        p.rich-text= val[1]  
+//- +rich-checkbox([{'hallway':['Широкий коридор', 'Ширина коридоров в номере не менее 91 см.']}, {'help':['Помощник для инвалидов', 'На 1 этаже вас встретит спецуиалист и проведет до номера']}])
+
 
 mixin radioBtn(id, label)
     label.container(for=id)= label
@@ -118,7 +134,7 @@ mixin expandable-rich-checkbox-list(args)
                                 label(for=key)=  val[0]
                                     p.rich-text= val[1]       
 
-//-+expandable-rich-checkbox-list([{'breakfast':['Завтрак', 'С доставкой в номер']}, {'table':['Письменный стол', 'Удобный']}])
+//- +expandable-rich-checkbox-list([{'breakfast':['Завтрак', 'С доставкой в номер']}, {'table':['Письменный стол', 'Удобный']}])
 
 mixin bullet-list(...texts)
     ul.bullet-list
@@ -130,7 +146,10 @@ mixin bullet-list(...texts)
 
 mixin range(rangeId='range-price', valueId='range-value')
     .range
-        div.range-value(id=valueId)
+        div.card__label-wide
+            span.range__title
+                h3 диапазон цены
+            span.range__value(id=valueId)
         div(id=rangeId)
     
 //-+range 

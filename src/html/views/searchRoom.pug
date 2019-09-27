@@ -5,5 +5,11 @@ include ../components/forms/inputs.pug
         span(class="card__label-wide")
             h3 Гости
             +select('wide', 3, 'сколько гостей', [{'adults':'взрослые'}, {'children':'дети'}, {'babies':'младенцы'}])
+        +range
+        .bottom-text Стоимость за сутки пребывания в номере
+        +checkbox([{'smoking':'Можно курить'}, {'pets':'Можно с питомцами'}, {'guests':'Можно пригласить гостей (до 10 человек)'}])
+        +rich-checkbox([{'hallway':['Широкий коридор', 'Ширина коридоров в номере не менее 91 см.']}, {'help':['Помощник для инвалидов', 'На 1 этаже вас встретит спецуиалист и проведет до номера']}])
+        +select('wide select-beds', 3, 'удобства', [{'bedrooms':'спальни'}, {'children':'дети'}, {'babies':'младенцы'}])
+
     .searchRoom__cards
         p dfsdffsfsfd
