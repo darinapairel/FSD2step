@@ -1,0 +1,80 @@
+.landing__content{ 
+    padding: 0;   
+    .landing__card{
+        position: absolute;
+        z-index:1;
+        top: 140px;
+        left: 5vw;
+        @include respond-to(wide-screens){
+            top: 140px;
+            left: 140px;
+        };
+        
+        .card{
+            width: 90vw;
+            @include respond-to(wide-screens){
+                width: 380px;
+                height: 374px;
+            };
+            @include respond-to(medium-screens){
+                max-width: 380px;
+                height: 374px;
+            };
+            
+        }
+    }
+    .landing__slider {
+        height:860px;        
+        .mainSlider{        
+            .mainSlider__image{
+                &#image-1{
+                    background: url('../img/background-img1.png') no-repeat;
+                    background-size: cover;        
+                }
+                
+                &#image-2{
+                    background: url('../img/background-img2.png') no-repeat;
+                    background-size: cover;
+                }
+                
+                &#image-3{
+                    background: url('../img/background-img3.png') no-repeat;
+                    background-size: cover;
+                }
+                    height: 860px;
+                
+            }
+            &.slick-slider {
+                .slick-list {
+                    margin: 0;
+                    width: 100%;
+                    box-sizing: border-box;
+                  }
+                  .slick-track{
+                    .slick-slide {    
+                        margin:0;
+                        margin-right: 50px;
+                      }
+                  }
+              }
+            .slick-slide {
+                width: 100vw!important;
+                height: 860px;
+            }
+        }
+
+
+    }
+}
+  
+.landing__footer{
+    position: absolute;
+    left: 0;
+    z-index: 1;
+    right: 0;
+    background: #fff;
+    @include respond-to(handhelds){
+        padding: 0 10px;
+        box-sizing: border-box;
+    }
+}
