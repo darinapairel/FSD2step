@@ -1,9 +1,84 @@
-
 .carousel{
     width: 270px;
-    height: 151.38px;
-}
+    .carousel__slider{
+        width: inherit;
+        height: 151.38px;
+    }
+    .carousel__row{
+        display: flex;
+        justify-content: space-between;
+        .room-info{
+            font-family: Quicksand;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 17px;
+            .room-info__room-type{
+                margin-left:5px;
+                color:$purple;
+                @extend h3
+            }
+        }
+        .room-price{
+            line-height: 18px;
+            color:  $dark-shade-50
+        }
+        .room-rating{
+            .rating{
+                border: none;
+                outline: none;
+                width: 120px;
+                height: 24px;
+                padding: 0;
+                margin:0;
+                background: url(../img/star_border.png);
+                background-size: 24px auto;
+                background-repeat: repeat-x;
 
+                input{ 
+                    position: absolute;
+                    margin: 0;
+                    height: 24px!important;
+                    font-size: inherit;
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
+                    appearance: none;
+                    background-size: 24px auto;
+                    background-repeat: repeat-x;
+                    border: none;
+                    &:checked{
+                        background-image: url(../img/star.png)
+                    }
+                    &:nth-of-type(1){
+                        z-index: 5;
+                        width: 24px;
+                    }
+                    &:nth-of-type(2){
+                        z-index: 4;
+                        width: 48px;
+                    }
+                    &:nth-of-type(3){
+                        z-index: 3;
+                        width: 72px;
+                    }
+                    &:nth-of-type(4){
+                        z-index: 2;
+                        width: 96px;
+                    }
+                    &:nth-of-type(5){
+                        z-index: 1;
+                        width: 120px;
+                    }
+                    // font-size: 14px;
+                    // box-sizing: border-box;
+                    // height: 44px !important;
+                    // max-width: 320px;
+                    // border-radius: 4px;
+                }
+            }
+        }
+    }
+}
 .slick-slide {
     height: auto; 
   }

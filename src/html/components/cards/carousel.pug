@@ -1,24 +1,26 @@
-mixin suit-mini-card(imagesForSlider, roomNum, price, rating)
+mixin suit-mini-card(imagesForSlider, roomNum, roomType, price, rating)
 
-    .container
-        .carousel
+    .carousel
+        .carousel__slider
             img.imagesForSlider(src=imagesForSlider[0], alt="1")
             img.imagesForSlider(src=imagesForSlider[1], alt="2")    
             img.imagesForSlider(src=imagesForSlider[2], alt="3") 
-        .under-carousel
-            p.room-info
-                span.room-info__num №
-                span.room-info__room= roomNum
-                span.room-info__room-type_lux люкс
+        .carousel__row
+            p.room-info                
+                span.room-info__room №#{roomNum}
+                span.room-info__room-type= roomType
             p.room-price
-                span.room-price__price= price
-                span.room-price__range в сутки
-            
-            div(class="room-star", data-rate-value=rating)
+                span.room-price #{price} в сутки
+        .carousel__row    
+            .room-rating 
+                include ../forms/rating.pug
+                +star_rating(4)
+
 
 +suit-mini-card(
     ["img/suite-for-carousel-1.jpg","img/suite-for-carousel-2.jpg", "img/suite-for-carousel-3.jpg"],
     888,
+    "люкс",
     "9 990 ₽",
     4
 )            
