@@ -1,0 +1,107 @@
+
+<link rel="stylesheet" href="./libs/jquery-nice-select-master/css/nice-select.css">
+<link rel="stylesheet" href="./libs/jquery-nice-select-master/css/nice-search-multiple.css">
+<!--+select(3, 'сколько гостей', [{'adults':'взрослые'}, {'children':'дети'}, {'babies':'младенцы'}])-->
+<div class="searchRoom">
+  <div class="searchRoom__aside">
+    <div class="calendar">
+      <label class="card__label-wide"> 
+        <h3>даты пребывания в отеле</h3><span class="input">
+          <input class="calendar__inp calendar__inp-filter" id="calendar__input-filter" placeholder="ДД.MМ.ГГГГ" name="daterange">
+          <button class="calendar__icon"></button></span>
+      </label>
+    </div><span class="card__label-wide">
+      <h3>Гости</h3>
+      <select class="select wide" multiple>
+        <div>
+          <option class="opt" disabled selected>сколько гостей</option>
+          <option value="adults">взрослые
+&lt;span class=&quot;btn-group&quot;&gt;
+&lt;button class='btn-group__btn plus'&gt; + &lt;/button&gt;
+&lt;span class=count&gt;0&lt;/span&gt;
+&lt;button class='btn-group__btn minus'&gt; - &lt;/button&gt;
+&lt;/span&gt;
+</option>
+          <option value="children">дети
+&lt;span class=&quot;btn-group&quot;&gt;
+&lt;button class='btn-group__btn plus'&gt; + &lt;/button&gt;
+&lt;span class=count&gt;0&lt;/span&gt;
+&lt;button class='btn-group__btn minus'&gt; - &lt;/button&gt;
+&lt;/span&gt;
+</option>
+          <option value="babies">младенцы
+&lt;span class=&quot;btn-group&quot;&gt;
+&lt;button class='btn-group__btn plus'&gt; + &lt;/button&gt;
+&lt;span class=count&gt;0&lt;/span&gt;
+&lt;button class='btn-group__btn minus'&gt; - &lt;/button&gt;
+&lt;/span&gt;
+</option>
+        </div>
+      </select></span>
+    <div class="range">
+      <div class="card__label-wide"><span class="range__title">
+          <h3>диапазон цены</h3></span><span class="range__value" id="range-value"></span></div>
+      <div id="range-price"></div>
+    </div>
+    <div class="bottom-text">Стоимость за сутки пребывания в номере</div>
+    <h3>Checkbox buttons</h3>
+    <div class="checkbox-buttons">
+      <div class="row">
+        <input type="checkbox" id="smoking">
+        <label for="smoking">Можно курить</label>
+      </div>
+      <div class="row">
+        <input type="checkbox" id="pets">
+        <label for="pets">Можно с питомцами</label>
+      </div>
+      <div class="row">
+        <input type="checkbox" id="guests">
+        <label for="guests">Можно пригласить гостей (до 10 человек)</label>
+      </div>
+    </div>
+    <h3>Доступность</h3>
+    <div class="rich-checkbox">
+      <div class="row">
+        <input type="checkbox" id="hallway">
+        <label for="hallway">Широкий коридор
+          <p class="rich-text">Ширина коридоров в номере не менее 91 см.</p>
+        </label>
+      </div>
+      <div class="row">
+        <input type="checkbox" id="help">
+        <label for="help">Помощник для инвалидов
+          <p class="rich-text">На 1 этаже вас встретит спецуиалист и проведет до номера</p>
+        </label>
+      </div>
+    </div>
+    <select class="select wide select-beds" multiple>
+      <div>
+        <option class="opt" disabled selected>удобства</option>
+        <option value="bedrooms">спальни
+&lt;span class=&quot;btn-group&quot;&gt;
+&lt;button class='btn-group__btn plus'&gt; + &lt;/button&gt;
+&lt;span class=count&gt;0&lt;/span&gt;
+&lt;button class='btn-group__btn minus'&gt; - &lt;/button&gt;
+&lt;/span&gt;
+</option>
+        <option value="children">дети
+&lt;span class=&quot;btn-group&quot;&gt;
+&lt;button class='btn-group__btn plus'&gt; + &lt;/button&gt;
+&lt;span class=count&gt;0&lt;/span&gt;
+&lt;button class='btn-group__btn minus'&gt; - &lt;/button&gt;
+&lt;/span&gt;
+</option>
+        <option value="babies">младенцы
+&lt;span class=&quot;btn-group&quot;&gt;
+&lt;button class='btn-group__btn plus'&gt; + &lt;/button&gt;
+&lt;span class=count&gt;0&lt;/span&gt;
+&lt;button class='btn-group__btn minus'&gt; - &lt;/button&gt;
+&lt;/span&gt;
+</option>
+      </div>
+    </select>
+  </div>
+  <div class="searchRoom__cards">
+    <h1>Номера, которые мы для вас подобрали</h1>
+  </div>
+</div>

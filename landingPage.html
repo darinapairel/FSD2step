@@ -1,0 +1,59 @@
+
+<div class="landing__content">
+  <div class="landing__card">
+    <div class="card"> 
+      <h1 class="card__title">Найдём номера под ваши пожелания</h1>
+            <div class="calendar"> 
+              <label class="card__label"> 
+                <h3>Прибытие</h3><span>
+                  <input class="calendar__inp" id="calendar__input-first" placeholder="ДД.MМ.ГГГГ" name="daterange">
+                  <button class="calendar__icon"></button></span>
+              </label>
+              <label class="card__label"> 
+                <h3>Выезд</h3><span>
+                  <input class="calendar__inp" id="calendar__input-second" placeholder="ДД.MМ.ГГГГ" name="daterange">
+                  <button class="calendar__icon">   </button></span>
+              </label>
+            </div>
+            <script src="./libs/daterangepicker-master/daterangepicker.js"></script>
+      <link rel="stylesheet" href="./libs/jquery-nice-select-master/css/nice-select.css">
+      <link rel="stylesheet" href="./libs/jquery-nice-select-master/css/nice-search-multiple.css">
+      <!--+select(3, 'сколько гостей', [{'adults':'взрослые'}, {'children':'дети'}, {'babies':'младенцы'}])--><span class="card__label">
+        <h3>Гости</h3>
+              <select class="select" multiple>
+                <div>
+                  <option class="opt" disabled selected>сколько гостей</option>
+                  <option value="adults">взрослые
+&lt;span class=&quot;btn-group&quot;&gt;
+&lt;button class='btn-group__btn plus'&gt; + &lt;/button&gt;
+&lt;span class=count&gt;0&lt;/span&gt;
+&lt;button class='btn-group__btn minus'&gt; - &lt;/button&gt;
+&lt;/span&gt;
+</option>
+                  <option value="children">дети
+&lt;span class=&quot;btn-group&quot;&gt;
+&lt;button class='btn-group__btn plus'&gt; + &lt;/button&gt;
+&lt;span class=count&gt;0&lt;/span&gt;
+&lt;button class='btn-group__btn minus'&gt; - &lt;/button&gt;
+&lt;/span&gt;
+</option>
+                  <option value="babies">младенцы
+&lt;span class=&quot;btn-group&quot;&gt;
+&lt;button class='btn-group__btn plus'&gt; + &lt;/button&gt;
+&lt;span class=count&gt;0&lt;/span&gt;
+&lt;button class='btn-group__btn minus'&gt; - &lt;/button&gt;
+&lt;/span&gt;
+</option>
+                </div>
+              </select></span>
+      <button class="card__submit-button">Подобрать номер                    </button>
+    </div>
+  </div>
+<div class="landing__slider">       
+  <div class="mainSlider">
+    <div class="mainSlider__image" id="image-1"></div>
+    <div class="mainSlider__image" id="image-2"></div>
+    <div class="mainSlider__image" id="image-3">    </div>
+  </div>
+</div>
+</div>

@@ -1,5 +1,5 @@
-link(rel="stylesheet", href="../../../../libs/jquery-nice-select-master/css/nice-select.css")
-link(rel="stylesheet", href="../../../../libs/jquery-nice-select-master/css/nice-search-multiple.css")
+link(rel="stylesheet", href="./libs/jquery-nice-select-master/css/nice-select.css")
+link(rel="stylesheet", href="./libs/jquery-nice-select-master/css/nice-search-multiple.css")
 
 mixin select(className='', num, selTitle, args)
     - var button = `
@@ -43,7 +43,7 @@ mixin subscribeInp(placeholder)
     span.input
         input(type="email", placeholder=placeholder)
         button.input_icon(type="submit")
-            include ../../../img/arrow_forward.pug
+            include ./img/arrow_forward.pug
             +arrow_forward('#BC9CFF','#8BA4F9')
 
 //- +subscribeInp('Email')

@@ -1,6 +1,0 @@
-mixin star_rating(rateNum)
-    fieldset.rating
-        - for (var i=1; i<=5; i++)             
-            input(type="radio", name="star", value=i, disabled, checked = i === rateNum? true : false )
-
-    

@@ -1,0 +1,123 @@
+
+<nav> <img class="logo_img" src="./img/Logo.svg" alt="logo"><span id="close">x</span><span id="burgeer">----</span>
+  <ul id="header-menu"> 
+    <li>Home</li>
+    <li>About Us</li>
+    <li>Servises<span class="expand_arrow"><img src="./img/expand_more.png" alt="arrow"></span></li>
+    <li>Careers  </li>
+    <li>News</li>
+    <li>Documentation</li>
+    <li></li><span class="loggedName">Cosmin Negoita</span>
+  </ul>
+</nav>
+<div class="landing__content">
+  <div class="landing__card">
+    <div class="card"> 
+      <h1 class="card__title">Найдём номера под ваши пожелания</h1>
+            <div class="calendar"> 
+              <label class="card__label"> 
+                <h3>Прибытие</h3><span>
+                  <input class="calendar__inp" id="calendar__input-first" placeholder="ДД.MМ.ГГГГ" name="daterange">
+                  <button class="calendar__icon"></button></span>
+              </label>
+              <label class="card__label"> 
+                <h3>Выезд</h3><span>
+                  <input class="calendar__inp" id="calendar__input-second" placeholder="ДД.MМ.ГГГГ" name="daterange">
+                  <button class="calendar__icon">   </button></span>
+              </label>
+            </div>
+            <script src="./libs/daterangepicker-master/daterangepicker.js"></script>
+      <link rel="stylesheet" href="./libs/jquery-nice-select-master/css/nice-select.css">
+      <link rel="stylesheet" href="./libs/jquery-nice-select-master/css/nice-search-multiple.css">
+      <!--+select(3, 'сколько гостей', [{'adults':'взрослые'}, {'children':'дети'}, {'babies':'младенцы'}])--><span class="card__label">
+        <h3>Гости</h3>
+              <select class="select" multiple>
+                <div>
+                  <option class="opt" disabled selected>сколько гостей</option>
+                  <option value="adults">взрослые
+&lt;span class=&quot;btn-group&quot;&gt;
+&lt;button class='btn-group__btn plus'&gt; + &lt;/button&gt;
+&lt;span class=count&gt;0&lt;/span&gt;
+&lt;button class='btn-group__btn minus'&gt; - &lt;/button&gt;
+&lt;/span&gt;
+</option>
+                  <option value="children">дети
+&lt;span class=&quot;btn-group&quot;&gt;
+&lt;button class='btn-group__btn plus'&gt; + &lt;/button&gt;
+&lt;span class=count&gt;0&lt;/span&gt;
+&lt;button class='btn-group__btn minus'&gt; - &lt;/button&gt;
+&lt;/span&gt;
+</option>
+                  <option value="babies">младенцы
+&lt;span class=&quot;btn-group&quot;&gt;
+&lt;button class='btn-group__btn plus'&gt; + &lt;/button&gt;
+&lt;span class=count&gt;0&lt;/span&gt;
+&lt;button class='btn-group__btn minus'&gt; - &lt;/button&gt;
+&lt;/span&gt;
+</option>
+                </div>
+              </select></span>
+      <button class="card__submit-button">Подобрать номер                    </button>
+    </div>
+  </div>
+<div class="landing__slider">       
+  <div class="mainSlider">
+    <div class="mainSlider__image" id="image-1"></div>
+    <div class="mainSlider__image" id="image-2"></div>
+    <div class="mainSlider__image" id="image-3">    </div>
+  </div>
+</div>
+</div>
+<footer class="landing__footer">
+  <div class="footer">
+    <div class="col"><img class="logo_img" src="./img/Logo.svg" alt="logo">
+      <p class="txt">Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.</p>
+    </div>
+    <div class="col">
+      <h3>Navigation</h3>
+      <ul> 
+        <li>About Us</li>
+        <li>News</li>
+        <li>Support</li>
+        <li>Products</li>
+      </ul>
+    </div>
+    <div class="col">
+      <h3>Navigation</h3>
+      <ul> 
+        <li>Who we are</li>
+        <li>Our team</li>
+        <li>Careers</li>
+        <li>Investors</li>
+      </ul>
+    </div>
+    <div class="col">
+      <h3>Support</h3>
+      <ul> 
+        <li>Documentation</li>
+        <li>Community</li>
+        <li>Get in Touch</li>
+      </ul>
+    </div>
+    <div class="col">
+      <h3>Subscribe to our newsletter</h3>
+      <p class="txt">Receive our latest news and promotions in your inbox!</p>
+      <link rel="stylesheet" href="./libs/jquery-nice-select-master/css/nice-select.css">
+      <link rel="stylesheet" href="./libs/jquery-nice-select-master/css/nice-search-multiple.css">
+      <!--+select(3, 'сколько гостей', [{'adults':'взрослые'}, {'children':'дети'}, {'babies':'младенцы'}])--><span class="input">
+              <input type="email" placeholder="Your email address">
+              <button class="input_icon" type="submit">
+                          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 0.984375L17.0156 9L9 17.0156L7.59375 15.6094L13.1719 9.98438H0.984375V8.01562H13.1719L7.59375 2.39062L9 0.984375Z" fill="url(#paint0_linear)"></path>
+                            <defs>
+                              <linearGradient id="paint0_linear" x1="9" y1="-13" x2="9" y2="31" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#BC9CFF"></stop>
+                                <stop offset="1" stop-color="#8BA4F9"></stop>
+                              </linearGradient>
+                            </defs>
+                          </svg>
+              </button></span>
+    </div>
+  </div>
+  <div class="footer__link"><span class="txt">Copyright © 2018 Toxin UI Kit. All rights reserved.</span><span class="links"><a class="links__link" href="https://twitter.com/"><img src="../../img/twitter.svg" alt=""></a><a class="links__link" href="https://www.facebook.com/"><img src="../../img/Fb.svg" alt=""></a><a class="links__link" href="https://www.instagram.com/"><img src="../../img/instagram.svg" alt=""></a></span></div>
+</footer>
