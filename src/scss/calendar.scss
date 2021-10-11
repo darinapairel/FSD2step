@@ -87,9 +87,8 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-}
 
-.card__label{
+    .card__label{
     display: flex;
     flex-direction: column;
     margin-bottom: 20px;
@@ -97,11 +96,17 @@
     & span{
         display: inherit;
     }
+    }
+    .card__label-wide{
+        @extend .card__label;
+        max-width: 266px !important;;   
+    }
+
+    span .calendar__inp{
+        width: 150px;
+    }
 }
-.card__label-wide{
-    @extend .card__label;
-    max-width: 266px !important;;   
-}
+
 .calendar-buttons__btn{
     background: transparent;
     border: none;
@@ -117,3 +122,5 @@
 .calendar-buttons__btn_purple{
     color: $purple;
 }
+
+.card__submit-button{ margin-top: 25px }
