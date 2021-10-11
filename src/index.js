@@ -7,5 +7,3 @@ import './js/landingPage.js';
 import './js/range.js';
 import './js/option.js';
 import './js/expandable.js';
-import './js/header.js';
-
